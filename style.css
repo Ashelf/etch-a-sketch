@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+}
+
+#container {
+    display: inline-grid;
+    height: 550px;
+    width: 800px;
+}
+
+.grid {
+    display: inline-block;
+    background-color: white;
+}
