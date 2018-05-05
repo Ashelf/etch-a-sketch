@@ -1,11 +1,13 @@
-createGrid(16);
-
 function createGrid(x) {
-   for(var rows = 0; rows < x; rows++) {
-       for(var columns = 0; columns < x; columns++) {
-           let div = document.createElement("div");
-           div.classList.add("grid");
-           container.appendChild(div);
-       }
-   }
-}
+    const container = document.querySelector('#container');
+    for(let i = 0; i < x * x; i++) {
+      const content = document.createElement("div");
+      content.classList.add("gridBox");
+      container.appendChild(content);
+    }
+    container.setAttribute('style', `grid-template-columns: repeat(${x}, auto)`);
+  }
+
+  
+
+  createGrid(16);

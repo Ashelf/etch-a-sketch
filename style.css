@@ -1,14 +1,17 @@
-body {
-    background-color: black;
-}
-
 #container {
-    display: inline-grid;
-    height: 550px;
-    width: 800px;
+    display: grid;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    border: 4px solid black;
 }
 
-.grid {
-    display: inline-block;
-    background-color: white;
+.gridBox {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.gridBox:hover, {
+    background-color: black;
 }
