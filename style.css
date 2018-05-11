@@ -12,6 +12,12 @@
     box-sizing: border-box;
 }
 
-.gridBox:hover, {
+.hoverGridBox {
     background-color: black;
+}
+
+#newGridButton {
+    margin: auto;
+    display: block;
+    margin-bottom: 10px;
 }
