@@ -17,6 +17,8 @@ function modifyColor() {
   });
 }
 
+document.getElementById("blackColor").onclick = modifyColor();
+
 function clearGrid() {
   document.getElementById("container").innerHTML = "";
   let newGrid = prompt("Please type how many squares you want.");
@@ -24,7 +26,7 @@ function clearGrid() {
   if (isNaN(newGrid)) {
     alert("You can only enter numbers!");
     clearGrid();
-  } else if (newGrid == "") {
+  } else if (newGrid === "") {
     clearGrid();
   } else if (newGrid === null) {
     createGrid(16);
@@ -37,17 +39,22 @@ function clearGrid() {
 
 document.getElementById("newGridButton").onclick = clearGrid;
 
-function randomColors() {
-  var hoverGrid = document.getElementsByClassName("hoverGridBox");
-  let color = '#';
-  let letters = ['000000','FF0000','00FF00','0000FF','FFFF00','00FFFF','FF00FF','C0C0C0'];
-  color += letters[Math.floor(Math.random() * letters.length)];
-  
-  hoverGrid.style.backgroundColor = color;
-
+function getRandomColors() {
+  let grid = document.querySelectorAll(".gridBox");
+  grid.forEach((box) => {
+    box.addEventListener('mouseenter', (e) => {
+      let x = Math.floor(Math.random() * 256);
+      let y = Math.floor(Math.random() * 256);
+      let z = Math.floor(Math.random() * 256);
+      let bgroundColor = "rgb(" + x + "," + y + "," + z + ")";
+      
+      box.style.backgroundColor = bgroundColor;
+    });
+  });
 }
 
-document.getElementById("randomColorsButton").onclick = randomColors;
+document.getElementById("randomColorsButton").onclick = getRandomColors;
+
 
 
 createGrid(16);
