@@ -10,9 +10,9 @@ function createGrid(x) {
 
 function modifyColor() {
   let grid = document.querySelectorAll(".gridBox");
-  grid.forEach((box) => {
-    box.addEventListener('mouseenter', (e) => {
-      box.classList.add("hoverGridBox");
+  grid.forEach(function(box) {
+    box.addEventListener("mouseenter", function(e) {
+      box.style.backgroundColor = "black";
     });
   });
 }
@@ -41,8 +41,8 @@ document.getElementById("newGridButton").onclick = clearGrid;
 
 function getRandomColors() {
   let grid = document.querySelectorAll(".gridBox");
-  grid.forEach((box) => {
-    box.addEventListener('mouseenter', (e) => {
+  grid.forEach(function(box) {
+    box.addEventListener("mouseenter", function(e) {
       let x = Math.floor(Math.random() * 256);
       let y = Math.floor(Math.random() * 256);
       let z = Math.floor(Math.random() * 256);
@@ -55,7 +55,7 @@ function getRandomColors() {
 
 document.getElementById("randomColorsButton").onclick = getRandomColors;
 
-
+document.getElementById("blackColor").onclick = modifyColor;
 
 createGrid(16);
 modifyColor();
