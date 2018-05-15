@@ -106,6 +106,7 @@ function clearGrid() {
   } else if (newGrid === null) {
     createGrid(16);
     getColorBlack();
+    eraseGrid();
   } else {
     createGrid(newGrid);
     getColorBlack();

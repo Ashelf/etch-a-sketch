@@ -1,5 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #f7f7ea;
+    background-color: #24272E;
+}
+
+#header {
+    background-color: white;
+    padding: 15px;
 }
 
 #container {
@@ -16,7 +27,43 @@ body {
     box-sizing: border-box;
 }
 
+#buttons button {
+    position: absolute;
+    display: block;
+    border: 3px solid blue;
+    padding: 5px;
+    margin-top: 100px;
+    margin-left: 120px;
+    display: block;
+}
+
 #newGridButton {
-    float: left;
-    margin-bottom: 50px;
+    position: relative;
+    top: 100px;
+    padding: 4px;
+    font-family: "Cabin Condensed", serif;
+    font-size: 20px;
+    background-color: white;
+    border: 3px solid blue;
+    border-radius: 15px;
+}
+
+#randomColorsButton {
+    position: relative;
+    top: 150px;
+}
+
+#getWhite {
+    position: relative;
+    top: 200px;
+}
+
+#eraseAll {
+    position: relative;
+    top: 250px;
+}
+
+#selectColor {
+    position: relative;
+    top: 300px;
 }
