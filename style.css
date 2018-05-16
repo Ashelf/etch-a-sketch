@@ -23,11 +23,11 @@ body {
 }
 
 .gridBox {
-    border: 1px solid white;
+    border: 2px solid white;
     box-sizing: border-box;
 }
 
-#buttons button {
+/*.buttons button {
     position: absolute;
     display: block;
     border: 3px solid blue;
@@ -35,12 +35,25 @@ body {
     margin-top: 100px;
     margin-left: 120px;
     display: block;
+}*/
+
+.buttons {
+    position: absolute;
+    float: left;
+    top: 150px;
+    left: 150px;
+}
+
+.buttons > button {
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 8px;
 }
 
 #newGridButton {
-    position: relative;
+    /*position: relative;*/
     top: 100px;
-    padding: 4px;
     font-family: "Cabin Condensed", serif;
     font-size: 20px;
     background-color: white;
@@ -49,21 +62,20 @@ body {
 }
 
 #randomColorsButton {
-    position: relative;
-    top: 150px;
+    border: 3px solid blue;
+    border-radius: 15px;
 }
 
 #getWhite {
-    position: relative;
-    top: 200px;
+
 }
 
 #eraseAll {
-    position: relative;
-    top: 250px;
+    
 }
 
 #selectColor {
     position: relative;
-    top: 300px;
+    top: 360px;
+    left: 145px;
 }
