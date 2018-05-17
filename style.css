@@ -5,21 +5,32 @@
 }
 
 body {
-    background-color: #24272E;
+    background-color: #00356B;
 }
 
 #header {
     background-color: white;
     padding: 15px;
+    border-bottom: 8px solid black;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Cabin Condensed", serif;
+    font-size: 40px;
+    width: 100%;
 }
 
 #container {
     display: grid;
     width: 600px;
     height: 600px;
-    margin: 0 auto;
-    position: relative;
+    margin: 2px 400px 20px 400px;
+    position: absolute;
     border: 5px solid black;
+    border-radius: 10px;
+    overflow: auto;
+    flex-wrap: wrap;
 }
 
 .gridBox {
@@ -27,20 +38,10 @@ body {
     box-sizing: border-box;
 }
 
-/*.buttons button {
-    position: absolute;
-    display: block;
-    border: 3px solid blue;
-    padding: 5px;
-    margin-top: 100px;
-    margin-left: 120px;
-    display: block;
-}*/
-
 .buttons {
-    position: absolute;
+    position: relative;
     float: left;
-    top: 150px;
+    top: 45px;
     left: 150px;
 }
 
@@ -48,34 +49,39 @@ body {
     display: block;
     margin: auto;
     margin-bottom: 30px;
-    padding: 8px;
-}
-
-#newGridButton {
-    /*position: relative;*/
-    top: 100px;
+    padding: 10px;
+    background-color: #4682b4;
+    border: none;
+    border-radius: 15px;
     font-family: "Cabin Condensed", serif;
     font-size: 20px;
-    background-color: white;
-    border: 3px solid blue;
-    border-radius: 15px;
+    color: white;
+    outline: none;
 }
 
-#randomColorsButton {
-    border: 3px solid blue;
-    border-radius: 15px;
+.buttons > button:hover {
+    background-color: #73C2FB;
+    transition: background-color 0.4s ease-out;
 }
 
-#getWhite {
-
-}
-
-#eraseAll {
-    
+.buttons > button:active {
+    background-color: #A4DDED;
+    transition: none;
 }
 
 #selectColor {
     position: relative;
-    top: 360px;
-    left: 145px;
+    top: 345px;
+    left: 10px;
+    padding: 10px;
+    font-family: "Cabin Condensed", serif;
+    font-size: 20px;
+    color: white;
+    background-color: #4682b4;
+    border: none;
+}
+
+#selectColor:hover {
+    background-color: #73C2FB;
+    transition: background-color 0.4s ease-out;
 }
